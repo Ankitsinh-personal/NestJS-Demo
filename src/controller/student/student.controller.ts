@@ -1,5 +1,6 @@
 import {  Body, Controller, Get, Param, ParseUUIDPipe, Post, Put, UseGuards } from '@nestjs/common';
-import { RolesGuard } from 'src/roles.guard';
+import { Roles } from 'src/decorators/roles.decorator';
+import { RolesGuard } from 'src/guards/roles.guard';
 import { CreateStudentDto, FindStudentResponseDto, StudentResponseDto, UpdateStudentDto } from './dto/student.dto';
 import { StudentService } from './student.service';
 
@@ -9,6 +10,7 @@ export class StudentController {
     constructor(private studentService: StudentService){}
 
     @Get()
+    @Roles('Admin')
     @UseGuards(RolesGuard)
     getStudents() : FindStudentResponseDto[]{        
         return this.studentService.getStudents()

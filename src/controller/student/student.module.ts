@@ -1,5 +1,5 @@
 import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
-import { ValidStudentMiddleware } from 'src/common/middleware/validStudent.middleware';
+import { ValidStudentMiddleware } from 'src/middleware/validStudent.middleware';
 import { StudentController } from './student.controller';
 import { StudentService } from './student.service';
 

@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { students } from 'src/db';
 import { CreateStudentDto, FindStudentResponseDto, StudentResponseDto, UpdateStudentDto } from './dto/student.dto';
 import { v4 as uuid} from 'uuid'
-import { FindTeacherResponseDto } from 'src/teacher/dto/teacher.dto';
+import { FindTeacherResponseDto } from 'src/controller/teacher/dto/teacher.dto';
 
 @Injectable()
 export class StudentService {

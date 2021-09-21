@@ -1,6 +1,6 @@
 import { Controller, Get, Param, ParseUUIDPipe, Put } from '@nestjs/common';
-import {  StudentResponseDto } from 'src/student/dto/student.dto';
-import { StudentService } from 'src/student/student.service';
+import {  StudentResponseDto } from 'src/controller/student/dto/student.dto';
+import { StudentService } from 'src/controller/student/student.service';
 // import { FindTeacherResponseDto } from './dto/teacher.dto';
 
 @Controller('teachers/:teacherId/students')
